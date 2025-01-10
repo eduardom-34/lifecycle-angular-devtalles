@@ -1,4 +1,6 @@
+import { compileNgModule } from '@angular/compiler';
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-product',
@@ -18,6 +20,8 @@ export class ProductComponent implements OnInit, OnChanges, DoCheck, AfterConten
 
   ngOnInit(): void {
     console.log("ngOnInit");
+
+
   }
   ngOnChanges(changes: SimpleChanges): void {
     console.log({changes});
